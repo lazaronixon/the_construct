@@ -5,7 +5,7 @@
     <%%= form.label :<%= attribute.column_name %> %>
 <% end -%>
 <% if attribute.reference? -%>
-    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, { class: "form-control", data: { controller: "select" } }) %>
+    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, {}, { class: "form-control", data: { controller: "select" } }) %>
 <% elsif attribute.field_type == :check_box -%>
     <div class="custom-control custom-checkbox">
       <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: "custom-control-input" %>
