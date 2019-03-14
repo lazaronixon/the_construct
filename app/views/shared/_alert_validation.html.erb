@@ -3,7 +3,7 @@
     <div class="alert alert-danger alert-dismissible fade show", role: "alert">
       <button type="button" class="close" data-dismiss="alert" arial-label="Close"></button>
       <div>
-        <h5><%= t('activerecord.errors.template.header', count: resource.errors.count) %></h5>
+        <h5>Please correct the following items and try again:</h5>
         <ul class="pl-3">
           <% resource.errors.full_messages.each do |error| %>
             <li><%= error %></li>

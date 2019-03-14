@@ -1,7 +1,0 @@
-pt:
-  activerecord:
-    errors:
-      template:
-        header:
-          one: 'Please correct the following item and try again:'
-          other: 'Please correct the following %{count} items and try again:'
