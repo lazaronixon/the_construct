@@ -4,10 +4,8 @@ def source_paths
   [__dir__]
 end
 
-gem 'bootstrap'
-gem 'delocalize'
-gem 'geared_pagination'
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'geared_pagination'
 gem 'spreadsheet_architect'
 
 gem_group :production do
@@ -25,12 +23,13 @@ after_bundle do
   run "yarn add @fortawesome/fontawesome-free@^5.7.2"
   run "yarn add bootstrap@^4.2.1"
   run "yarn add bootstrap-daterangepicker@^3.0.3"
-  run "yarn add bootstrap-timepicker@^0.5.2"
+  run "yarn add cleave.js@^1.4.7"
   run "yarn add izitoast@^1.4.0"
   run "yarn add moment@^2.24.0"
+  run "yarn add popper.js@^1.14.7"
+  run "yarn add jquery@^3.3.1"
   run "yarn add jquery.nicescroll@^3.7.4"
-  run "yarn add selectric@^1.13.0"
-  run "yarn add tooltip.js@^1.3.1"
+  run "yarn add select2@^4.0.6-rc.1"
 
   directory 'app',      './app',      force: true
   directory 'config',   './config',   force: true

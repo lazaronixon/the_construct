@@ -1,6 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
+
   connect() {
     $(this.element).submit(function() {
       var form = $(this);
@@ -8,7 +9,8 @@ export default class extends Controller {
         event.preventDefault();
         event.stopPropagation();
       }
-      form.addClass('was-validated');
+      form.addClass("was-validated");
     })
   }
+
 }

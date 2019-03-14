@@ -1,7 +1,9 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
+
   connect() {
-    $(this.element).tooltip()
+    new Cleave(this.element, { numeral: true, numeralThousandsGroupStyle: "none" })
   }
+
 }

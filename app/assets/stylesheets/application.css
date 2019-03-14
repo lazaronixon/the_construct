@@ -12,17 +12,23 @@
  *
  *= require_tree .
  *= require bootstrap/scss/bootstrap
- *= require izitoast/dist/css/iziToast
  *= require fontawesome/rails
+ *= require select2/dist/css/select2
+ *= require bootstrap-daterangepicker/daterangepicker
+ *= require izitoast/dist/css/iziToast
  *= require stisla/style
  *= require stisla/components
  *= require_self
  */
 
- .main-content {
-   min-height: 649px;
- }
+.turbolinks-progress-bar {
+  background-color: #63ed7a;
+}
 
- .table .btn-icon.btn-sm {
-   line-height: 15px;
- }
+.main-content {
+  min-height: 649px;
+}
+
+.table .btn-icon.btn-sm {
+  line-height: 15px;
+}
