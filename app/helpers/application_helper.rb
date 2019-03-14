@@ -3,12 +3,6 @@ module ApplicationHelper
     content_for(:page_title) || Rails.application.class.to_s.split('::').first
   end
 
-  def nav_item(label, path , controller, actions = [])
-    tag.li class: "nav-item #{active_nav_item(options)}" do
-      link_to label, path, class: 'nav-link'
-    end
-  end
-
   def active_nav_item(controller, actions)
     'active' if active_actions?(controller, actions)
   end
