@@ -17,8 +17,8 @@ module ApplicationHelper
     sort_link(attribute, *args.push({}, { data: { turbolinks_action: 'replace' } }))
   end
 
-  def faicon(name, text = nil)
-    html_i = tag.i nil, class: "fas fa-#{name.to_s.tr('_', '-')}"
+  def faicon(name, text = nil, style = 'fas')
+    html_i = tag.i nil, class: "#{style} fa-#{name.to_s.tr('_', '-')}"
     html_text = tag.span text
     text ? tag.span(html_i + html_text) : html_i
   end
