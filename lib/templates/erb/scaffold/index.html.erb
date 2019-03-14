@@ -13,12 +13,9 @@
         <h4>List of <%= plural_table_name %></h4>
         <div class="card-header-action">
           <%%= link_to faicon(:plus, 'New <%= singular_table_name.titleize %>'), new_<%= singular_route_name %>_path, class: 'btn btn-icon icon-left btn-primary' %>
-          <div class="dropdown">
-            <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
-            <div class="dropdown-menu">
-              <%%= link_to faicon(:download, 'Export Data'), <%= plural_table_name %>_path(format: :csv, q: request.params[:q]), class: 'dropdown-item has-icon' %>
-            </div>
-          </div>
+          <%%= render 'shared/card_dropdown' do %>
+            <%%= link_to faicon(:download, 'Export Data'), <%= plural_table_name %>_path(format: :csv, q: request.params[:q]), class: 'dropdown-item has-icon' %>
+          <%% end %>
         </div>
       </div>
       <div class="card-body">
@@ -31,7 +28,7 @@
             < f.button faicon(:search, 'Search'), name: nil, class: 'btn btn-icon icon-left btn-primary' >
           </div>
         < end >
-        -->        
+        -->
         <div class="table-responsive">
           <table class="table table-striped table-md">
             <thead>
