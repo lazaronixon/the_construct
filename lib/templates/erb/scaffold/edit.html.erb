@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="section-header">
+    <h1><%= plural_table_name.titleize %></h1>
+    <div class="section-header-breadcrumb">
+      <div class="breadcrumb-item"><%%= link_to 'Dashboard', root_path %></div>
+      <div class="breadcrumb-item"><%%= link_to '<%= plural_table_name.titleize %>', <%= plural_table_name %>_path %></div>
+      <div class="breadcrumb-item">Editing <%= singular_table_name.titleize %></div>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="card">
+      <div class="card-header">
+        <h4>Editing <%= singular_table_name.titleize %></h4>
+      </div>
+      <div class="card-body">
+        <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%%= link_to faicon(:eye, 'Show'), @<%= singular_table_name %>, data: { turbolinks_action: 'replace' }, class: 'btn btn-icon icon-left btn-info' %>
+<%%= link_to faicon(:arrow_left, 'Back'), 'javascript:history.back()', class: 'btn btn-icon icon-left btn-secondary' %>

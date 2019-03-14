@@ -1,0 +1,16 @@
+default_dev_test: &default_dev_test
+  url: localhost:3000
+
+default: &default
+
+development:
+  <<: *default
+  <<: *default_dev_test
+
+test:
+  <<: *default
+  <<: *default_dev_test
+
+production:
+  <<: *default
+  url: rails_on_steroids.com

@@ -1,0 +1,17 @@
+<div class="main-sidebar sidebar-style-2">
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <%= link_to 'Stisla', root_path  %>
+    </div>
+    <div class="sidebar-brand sidebar-brand-sm">
+      <%= link_to 'St', root_path  %>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="<%= active_nav_item('home', 'index') %>">
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="far fa-fire"></i> <span>Dashboard</span>
+        <% end %>
+      </li>
+    </ul>
+  </aside>
+</div>
