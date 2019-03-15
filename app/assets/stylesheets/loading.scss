@@ -1,0 +1,22 @@
+@keyframes pulse-background {
+0% {
+  -webkit-background-size: 1% 0.1em;
+  background-size: 1% 0.1em;
+}
+100% {
+  -webkit-background-size: 200% 100em;
+  background-size: 200% 100em;
+  }
+}
+
+@mixin loader {
+  animation: pulse-background 1s ease infinite;
+  background-image: image-url("loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.1em;
+}
+
+[data-disable-with]:disabled:not(.disable-loading), {
+  @include loader;
+}
