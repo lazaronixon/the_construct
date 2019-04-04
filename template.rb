@@ -28,6 +28,7 @@ after_bundle do
   run "yarn add moment@^2.24.0"
   run "yarn add jquery.nicescroll@^3.7.4"
   run "yarn add select2@^4.0.6-rc.1"
+  run "yarn add waypoints@^4.0.1"
 
   directory 'app',      './app',      force: true
   directory 'config',   './config',   force: true

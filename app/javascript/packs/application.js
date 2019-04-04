@@ -9,15 +9,17 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap"
-import "jquery.nicescroll"
 import "moment"
+import "jquery.nicescroll"
 
 import "vendors/stisla/stisla"
 import "vendors/stisla/scripts"
 
 import "select2"
-import "bootstrap-daterangepicker"
 import "izitoast"
 import "cleave.js"
+import "bootstrap-daterangepicker"
+import "waypoints/lib/jquery.waypoints"
+import "waypoints/lib/shortcuts/infinite"
 
 import "controllers"
