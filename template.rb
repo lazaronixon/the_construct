@@ -34,6 +34,7 @@ after_bundle do
   directory 'config',   './config',   force: true
   directory 'lib',      './lib',      force: true
   directory 'public',   './public',   force: true
+  directory 'test',     './test',     force: true  
   directory 'vendor',   './vendor',   force: true
 
   copy_file 'Procfile', './Procfile'
