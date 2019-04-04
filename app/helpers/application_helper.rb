@@ -35,6 +35,10 @@ module ApplicationHelper
   def l(object, options = {})
     super(object, options) if object
   end
+  
+  def crud_actions
+    %w[index show new edit create update]
+  end  
 
   private
     def active_actions?(controller, actions)
