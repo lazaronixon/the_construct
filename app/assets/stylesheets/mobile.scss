@@ -1,15 +1,16 @@
-.m-header--fixed .m-body {
-  padding-top: 0 !important;
-}
-
-.m-aside-left--fixed .m-body {
-  padding-left: 0;
-}
-
-.d-app-mobile-none {
+.navbar.main-navbar, .navbar-bg, 
+.main-sidebar, .main-footer {
   display: none !important;
 }
 
-.d-app-mobile-inline {
+.main-content {
+  padding: 5px 10px !important;
+}
+
+.d-mobile-none {
+  display: none !important;
+}
+
+.d-mobile-inline {
   display: inline !important;
 }

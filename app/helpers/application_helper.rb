@@ -2,6 +2,14 @@ module ApplicationHelper
   def page_title
     content_for(:page_title) || Rails.application.class.to_s.split('::').first
   end
+  
+  def crud_actions
+    %w[index show new edit create update]
+  end
+  
+  def mobile_app?
+    request.user_agent && request.user_agent.end_with?('SteroidsMobile')
+  end  
 
   def active_nav_item(controller, actions)
     'active' if active_actions?(controller, actions)
@@ -34,11 +42,7 @@ module ApplicationHelper
 
   def l(object, options = {})
     super(object, options) if object
-  end
-  
-  def crud_actions
-    %w[index show new edit create update]
-  end  
+  end 
 
   private
     def active_actions?(controller, actions)
