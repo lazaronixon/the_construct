@@ -1,4 +1,4 @@
-# rails new awesome-rails -d=postgresql --webpack=stimulus -m ~/RailsProjects/scaffold_on_steroids/template.rb
+# rails new awesome-rails -d=postgresql --webpack=stimulus -m ~/RailsProjects/the_construct/template.rb
 
 def source_paths
   [__dir__]

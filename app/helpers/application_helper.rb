@@ -8,7 +8,7 @@ module ApplicationHelper
   end
   
   def mobile_app?
-    request.user_agent && request.user_agent.end_with?('SteroidsMobile')
+    request.user_agent && request.user_agent.end_with?('TheConstructMobile')
   end  
 
   def active_nav_item(controller, actions)

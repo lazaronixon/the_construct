@@ -13,4 +13,4 @@ test:
 
 production:
   <<: *default
-  url: rails_on_steroids.com
+  url: the_construct.com
