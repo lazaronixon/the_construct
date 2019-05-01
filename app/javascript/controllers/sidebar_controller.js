@@ -3,19 +3,24 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
   connect() {
-    if (this.activeMenuItem && this.activeSubMenuItem) {
-      this.activeSubMenuItem.style.display = "block"
+    if (this.activeDropDownItem) {
+      this.activeDropDownMenu.style.display = "block"
+      this.activeDropDown.classList.add("active")
     }
   }
 
   // Private
 
-  get activeMenuItem() {
-    return this.element.querySelector("li.active")
+  get activeDropDownItem() {
+    return this.element.querySelector(".dropdown-menu > li.active")
   }
 
-  get activeSubMenuItem() {
-    return this.activeMenuItem.closest(".dropdown-menu")
+  get activeDropDownMenu() {
+    return this.activeDropDownItem.closest(".dropdown-menu")
+  }
+
+  get activeDropDown() {
+    return this.activeDropDownItem.closest(".dropdown")
   }
 
 }

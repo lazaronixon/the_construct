@@ -15,9 +15,11 @@
 
       <!--
       <li class="menu-header">Controllers</li>
-      <render 'shared/sidebar_dropdown', title: faicon(:file_alt, 'Resources', 'far') do>
-        <li <active_nav_item('products', crud_actions)>><link_to 'Customers', customers_path, class: 'nav-link'></li>
-      <end>
+      <#= render 'shared/sidebar_dropdown', title: 'Resources', icon: 'file-alt' do #>
+        <li class="<#= active_nav_item('customers', crud_actions) #>">
+          <#= link_to 'Customers', customers_path, class: 'nav-link' #>
+        </li>
+      <# end #>
       -->
     </ul>
   </aside>
