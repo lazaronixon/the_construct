@@ -34,7 +34,7 @@ after_bundle do
   directory 'config',   './config',   force: true
   directory 'lib',      './lib',      force: true
   directory 'public',   './public',   force: true
-  directory 'test',     './test',     force: true  
+  directory 'test',     './test',     force: true
   directory 'vendor',   './vendor',   force: true
 
   copy_file 'Procfile', './Procfile'
@@ -50,9 +50,10 @@ after_bundle do
   end
 
   environment nil, env: 'production' do <<~RUBY
-    config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
-    config.active_job.queue_adapter = :sidekiq
+    config.force_ssl = true
     config.middleware.use Rack::Attack
+    config.active_job.queue_adapter = :sidekiq
+    config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
 
     config.cache_store = :mem_cache_store, (ENV["MEMCACHIER_SERVERS"] || "").split(","), {
       username: ENV["MEMCACHIER_USERNAME"], password: ENV["MEMCACHIER_PASSWORD"],
