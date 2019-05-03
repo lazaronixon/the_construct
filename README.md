@@ -1,5 +1,7 @@
 # The Construct
-**This is the construct. It's our rails template, it has almost everything. From beautiful layout to production ready setup, javascript components and good practices to learn.**
+**This is the construct.** It's our rails template, it has almost everything. From beautiful layout to production ready setup, javascript components and good practices to learn.
+
+![The Construct](https://raw.githubusercontent.com/lazaronixon/the_construct/master/screenshot_1.jpg)
 
 ## Getting started
 ```
@@ -17,7 +19,7 @@ $ rails new awesome-rails -d=postgresql --webpack=stimulus -m ~/RailsProjects/th
 * [DHH development practices](https://www.youtube.com/channel/UCdx5Dk3EWTe2i8YDA7bfl6g)
 
 ### Stisla Admin Template
-The construct integrates Stisla Admin Template with modern rails ecosystem tools like Webpack, Turbolinks and Stimulus JS, bringing a sophisticated implementation and maximum performance without SPA hassle.
+The construct integrates [Stisla Admin Template](https://demo.getstisla.com) with modern rails ecosystem tools like Webpack, Turbolinks and Stimulus JS, bringing a sophisticated implementation and maximum performance without SPA hassle.
 
 ### Scaffolds
 The construct replaces default scaffold template with a new one focused on production. Some features are:
@@ -39,13 +41,13 @@ The construct comes with some opinionated configurations and addons that should 
 * [Redis Cloud](https://elements.heroku.com/addons/rediscloud) or any other for memory data store.
 * [PaperTrail](https://elements.heroku.com/addons/papertrail) or any other for logging.
 * [SendGrid](https://elements.heroku.com/addons/sendgrid) for email delivery.
+* [RackAttack](https://github.com/kickstarter/rack-attack) for blocking & throttling abusive requests.
 * AssetHost configured to ENV['CLOUDFRONT_URL'].
 * Sidekiq as queue adapter.
-* [RackAttack](https://github.com/kickstarter/rack-attack) for blocking & throttling abusive requests.
 * Force SSL.
 
 ### Hybrid Mobile Architecture Ready
-The construct is a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith) template so it is full compatible with [TurboLinks IOS](https://github.com/turbolinks/turbolinks-ios), [TurboLinks Android](https://github.com/turbolinks/turbolinks-android) or [React Native TurboLinks](https://github.com/lazaronixon/react-native-turbolinks). After create a new project you can easily port it to a IOS/Android APP.
+The construct is a [Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith) template so it is full compatible with [TurboLinks IOS](https://github.com/turbolinks/turbolinks-ios), [TurboLinks Android](https://github.com/turbolinks/turbolinks-android) or [React Native TurboLinks](https://github.com/lazaronixon/react-native-turbolinks). After create a new project you can easily port it to a IOS/Android APP.
 
 ### Requirements
 Rails >= 6
