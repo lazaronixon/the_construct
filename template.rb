@@ -1,5 +1,3 @@
-# rails new awesome-rails -d=postgresql --webpack=stimulus -m ~/RailsProjects/the_construct/template.rb
-
 def source_paths
   [__dir__]
 end
@@ -9,10 +7,8 @@ gem 'geared_pagination'
 gem 'spreadsheet_architect'
 
 gem_group :production do
-  gem 'aws-sdk-s3'
   gem 'dalli'
   gem 'memcachier'
-  gem 'rack-cors'
   gem 'redis'
   gem 'sidekiq'
   gem 'rack-attack'
