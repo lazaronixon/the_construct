@@ -15,6 +15,7 @@
           <%%= link_to faicon(:plus, 'New <%= singular_table_name.titleize %>'), new_<%= singular_route_name %>_path, class: 'btn btn-icon icon-left btn-primary' %>
           <%%= render 'shared/card_dropdown' do %>
             <%%= link_to faicon(:download, 'Export Data'), <%= plural_table_name %>_path(format: :csv, q: request.params[:q]), class: 'dropdown-item has-icon' %>
+            <%%= link_to faicon(:print, 'Print Page'), 'javascript:window.print()', class: 'dropdown-item has-icon' %>
           <%% end %>
         </div>
       </div>

@@ -1,0 +1,15 @@
+.m-page-break { page-break-after: always; }
+.m-page-break:last-child { page-break-after: auto; }
+.m-keep-together { page-break-inside: avoid; }
+
+@media print {
+  .main-navbar, .navbar-bg,
+  .main-sidebar, .main-footer {
+    display: none !important;
+  }
+
+  .main-content, .card .card-header,
+  .card .card-body, .card .card-footer {
+    padding: 5px 10px !important;
+  }
+}

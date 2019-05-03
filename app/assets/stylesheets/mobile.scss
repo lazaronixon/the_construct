@@ -1,9 +1,10 @@
-.navbar.main-navbar, .navbar-bg, 
+.main-navbar, .navbar-bg, 
 .main-sidebar, .main-footer {
   display: none !important;
 }
 
-.main-content {
+.main-content, .card .card-header,
+.card .card-body, .card .card-footer {
   padding: 5px 10px !important;
 }
 
