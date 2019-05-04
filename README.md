@@ -23,8 +23,8 @@ The construct integrates [Stisla Admin Template](https://demo.getstisla.com) wit
 
 ### Scaffolds
 The construct replaces default scaffold template with a new one focused on production. Some features are:
-* [Sortable and filterable index page](https://github.com/activerecord-hackery/ransack)
-* [Infinite scroll table](https://github.com/basecamp/geared_pagination)
+* [Sortable and filterable](https://github.com/activerecord-hackery/ransack)
+* [Infinite scroll pagination](https://github.com/basecamp/geared_pagination)
 * [Exportable data](https://github.com/westonganger/spreadsheet_architect)
 * [Date Picker on date/datetime fields](https://demo.getstisla.com/forms-advanced-form.html)
 * [Number Mask on float/decimal fields](https://demo.getstisla.com/forms-advanced-form.html)
@@ -32,6 +32,7 @@ The construct replaces default scaffold template with a new one focused on produ
 * [Toastr plugin to show flash messages](https://demo.getstisla.com/modules-toastr.html)
 * [HTML5 client side validation integration](https://demo.getstisla.com/forms-validation.html)
 * Ajax form post with turbolinks handlers
+* API and WEB share controllers
 * Self generated system tests
 
 ### Heroku Ready
