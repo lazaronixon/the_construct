@@ -16,15 +16,15 @@ gem_group :production do
 end
 
 after_bundle do
-  run "yarn add jquery popper.js bootstrap@^4.2.1"
-  run "yarn add @fortawesome/fontawesome-free@^5.7.2"
-  run "yarn add bootstrap-daterangepicker@^3.0.3"
-  run "yarn add cleave.js@^1.4.7"
-  run "yarn add izitoast@^1.4.0"
-  run "yarn add moment@^2.24.0"
-  run "yarn add jquery.nicescroll@^3.7.4"
-  run "yarn add select2@^4.0.6-rc.1"
-  run "yarn add waypoints@^4.0.1"
+  run "yarn add jquery popper.js bootstrap@^4.2.1"\
+    " @fortawesome/fontawesome-free@^5.7.2"\
+    " bootstrap-daterangepicker@^3.0.3"\
+    " cleave.js@^1.4.7"\
+    " izitoast@^1.4.0"\
+    " moment@^2.24.0"\
+    " jquery.nicescroll@^3.7.4"\
+    " select2@^4.0.6-rc.1"\
+    " waypoints@^4.0.1"
 
   directory 'app',      './app',      force: true
   directory 'config',   './config',   force: true
