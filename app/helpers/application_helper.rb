@@ -2,14 +2,14 @@ module ApplicationHelper
   def page_title
     content_for(:page_title) || Rails.application.class.to_s.split('::').first
   end
-  
+
   def crud_actions
     %w[index show new edit create update]
   end
-  
+
   def mobile_app?
     request.user_agent && request.user_agent.end_with?('TheConstructMobile')
-  end  
+  end
 
   def active_nav_item(controller, actions)
     'active' if active_actions?(controller, actions)
@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
   def faicon(name, text = nil, style = 'fas')
-    html_i = tag.i nil, class: "#{style} fa-#{name.to_s.tr('_', '-')}"
+    html_i = tag.i nil, class: "#{style} fa-#{name.to_s.dasherize}"
     html_text = tag.span text
     text ? tag.span(html_i + html_text) : html_i
   end
@@ -42,7 +42,7 @@ module ApplicationHelper
 
   def l(object, options = {})
     super(object, options) if object
-  end 
+  end
 
   private
     def active_actions?(controller, actions)
