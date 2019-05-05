@@ -23,7 +23,7 @@ after_bundle do
     " izitoast@^1.4.0"\
     " moment@^2.24.0"\
     " jquery.nicescroll@^3.7.4"\
-    " select2@^4.0.6-rc.1"\
+    " select2@^4.0.7-rc.0"\
     " waypoints@^4.0.1"
 
   directory 'app',      './app',      force: true
