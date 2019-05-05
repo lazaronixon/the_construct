@@ -16,6 +16,7 @@ gem_group :production do
 end
 
 after_bundle do
+  run "spring stop"
   run "yarn add jquery popper.js bootstrap@^4.2.1"\
     " @fortawesome/fontawesome-free@^5.7.2"\
     " bootstrap-daterangepicker@^3.0.3"\
