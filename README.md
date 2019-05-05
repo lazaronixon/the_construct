@@ -26,7 +26,7 @@ The construct replaces default scaffold template with a new one focused on produ
 * [Sortable and filterable](https://github.com/activerecord-hackery/ransack)
 * [Infinite scroll pagination](https://github.com/basecamp/geared_pagination)
 * [Exportable data](https://github.com/westonganger/spreadsheet_architect)
-* [Date Picker on date/datetime fields](https://demo.getstisla.com/forms-advanced-form.html)
+* [Date Mask on date/datetime fields](https://demo.getstisla.com/forms-advanced-form.html)
 * [Number Mask on float/decimal fields](https://demo.getstisla.com/forms-advanced-form.html)
 * [Select with autocomplete on references fields](https://demo.getstisla.com/forms-advanced-form.html)
 * [Toastr plugin to show flash messages](https://demo.getstisla.com/modules-toastr.html)
