@@ -7,7 +7,8 @@ export default class extends Controller {
       locale: { format: "YYYY-MM-DD hh:mm" },
       singleDatePicker: true,
       timePicker: true,
-      timePicker24Hour: true
+      timePicker24Hour: true,
+      drops: 'up'
     });
   }
 
