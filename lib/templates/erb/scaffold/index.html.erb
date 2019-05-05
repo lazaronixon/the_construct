@@ -3,14 +3,14 @@
     <h1><%= plural_table_name.titleize %></h1>
     <div class="section-header-breadcrumb">
       <div class="breadcrumb-item"><%%= link_to 'Dashboard', root_path %></div>
-      <div class="breadcrumb-item">List of <%= plural_table_name %></div>
+      <div class="breadcrumb-item">List of <%= plural_table_name.titleize %></div>
     </div>
   </div>
 
   <div class="section-body">
     <div class="card">
       <div class="card-header">
-        <h4>List of <%= plural_table_name %></h4>
+        <h4>List of <%= plural_table_name.titleize %></h4>
         <div class="card-header-action">
           <%%= link_to faicon(:plus, 'New <%= singular_table_name.titleize %>'), new_<%= singular_route_name %>_path, class: 'btn btn-icon icon-left btn-primary' %>
           <%%= render 'shared/card_dropdown' do %>
