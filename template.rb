@@ -19,10 +19,8 @@ after_bundle do
   run "spring stop"
   run "yarn add jquery popper.js bootstrap@^4.2.1"\
     " @fortawesome/fontawesome-free@^5.7.2"\
-    " bootstrap-daterangepicker@^3.0.3"\
     " cleave.js@^1.4.7"\
     " izitoast@^1.4.0"\
-    " moment@^2.24.0"\
     " jquery.nicescroll@^3.7.4"\
     " select2@^4.0.7-rc.0"\
     " waypoints@^4.0.1"

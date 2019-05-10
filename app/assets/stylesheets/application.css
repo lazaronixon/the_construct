@@ -15,7 +15,6 @@
  *= require bootstrap/scss/bootstrap
  *= require fontawesome/rails
  *= require select2/dist/css/select2
- *= require bootstrap-daterangepicker/daterangepicker
  *= require izitoast/dist/css/iziToast
  *= require stisla/style
  *= require stisla/components
