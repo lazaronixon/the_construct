@@ -50,8 +50,8 @@ after_bundle do
     config.active_job.queue_adapter = :sidekiq
     config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
 
-    config.cache_store = :mem_cache_store, (ENV["MEMCACHIER_SERVERS"] || "").split(","), {
-      username: ENV["MEMCACHIER_USERNAME"], password: ENV["MEMCACHIER_PASSWORD"],
+    config.cache_store = :mem_cache_store, (ENV['MEMCACHIER_SERVERS'] || '').split(','), {
+      username: ENV['MEMCACHIER_USERNAME'], password: ENV['MEMCACHIER_PASSWORD'],
       socket_timeout: 1.5, :socket_failure_delay => 0.2
     }
   RUBY

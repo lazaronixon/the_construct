@@ -1,6 +1,4 @@
 module ApplicationHelper
-  MOBILE_USER_AGENT = 'TheConstructMobile'
-
   def page_title
     content_for(:page_title) || Rails.application.class.to_s.split('::').first
   end
@@ -10,7 +8,7 @@ module ApplicationHelper
   end
 
   def mobile_app?
-    request.user_agent && request.user_agent.end_with?(MOBILE_USER_AGENT)
+    request.user_agent && request.user_agent.match?(/TheConstructMobile/)
   end
 
   def active_nav_item(controller, actions)
@@ -28,7 +26,7 @@ module ApplicationHelper
   end
 
   def infinite_link_to(path, last_page)
-    link_to "Next page", path, class: 'infinite-more-link' unless last_page
+    link_to 'Next page', path, class: 'infinite-more-link' unless last_page
   end
 
   def n(number, precision = 2, options = {})
