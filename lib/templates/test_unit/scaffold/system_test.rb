@@ -16,11 +16,11 @@ class <%= class_name.pluralize %>Test < ApplicationSystemTestCase
     click_on "New <%= class_name.titleize %>"
 
     <%- attributes_hash.each do |attr, value| -%>
-    <%- if boolean?(attr) -%>
+      <%- if boolean?(attr) -%>
     check_label "<%= singular_table_name  %>_<%= attr %>" if <%= value %>
-    <%- else -%>
+      <%- else -%>
     fill_in "<%= attr.humanize %>", with: <%= value %>
-    <%- end -%>
+      <%- end -%>
     <%- end -%>
     click_on "Create <%= human_name %>"
 
@@ -33,11 +33,11 @@ class <%= class_name.pluralize %>Test < ApplicationSystemTestCase
     click_on "Edit it", match: :first
 
     <%- attributes_hash.each do |attr, value| -%>
-    <%- if boolean?(attr) -%>
+      <%- if boolean?(attr) -%>
     check_label "<%= singular_table_name %>_<%= attr %>" if <%= value %>
-    <%- else -%>
+      <%- else -%>
     fill_in "<%= attr.humanize %>", with: <%= value %>
-    <%- end -%>
+      <%- end -%>
     <%- end -%>
     click_on "Update <%= human_name %>"
 
