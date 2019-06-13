@@ -1,5 +1,5 @@
 # The Construct
-**This is the construct.** It's our rails template, it has almost everything. From beautiful layout to production ready setup, javascript components and good practices to learn.
+**This is The Construct.** It's our rails template, it has almost everything. From beautiful layout to production ready setup, javascript components and good practices to learn.
 
 ![The Construct](https://raw.githubusercontent.com/lazaronixon/the_construct/master/screenshot_1.jpg)
 
@@ -17,6 +17,7 @@ $ rails new awesome-rails -d=postgresql --webpack=stimulus -m ~/RailsProjects/th
 * [Heroku Ready](https://heroku.com)
 * [Hybrid Mobile Architecture Ready](https://m.signalvnoise.com/basecamp-3-for-ios-hybrid-architecture)
 * [DHH development practices](https://www.youtube.com/channel/UCdx5Dk3EWTe2i8YDA7bfl6g)
+* [ScreenCast](https://www.youtube.com/watch?v=_p0S0Ll7o78)
 
 ### Stisla Admin Template
 The construct integrates [Stisla Admin Template](https://demo.getstisla.com) with modern rails ecosystem tools like Webpack, Turbolinks and Stimulus JS, bringing a sophisticated implementation and maximum performance without SPA hassle.
