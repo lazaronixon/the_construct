@@ -2,7 +2,7 @@ def source_paths
   [__dir__]
 end
 
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack', github: 'activerecord-hackery/ransack', ref: '544bcdd'
 gem 'geared_pagination'
 gem 'spreadsheet_architect'
 
@@ -16,14 +16,14 @@ gem_group :production do
 end
 
 after_bundle do
-  run "spring stop"
-  run "yarn add jquery popper.js bootstrap@^4.2.1"\
-    " @fortawesome/fontawesome-free@^5.7.2"\
-    " cleave.js@^1.4.7"\
-    " izitoast@^1.4.0"\
-    " jquery.nicescroll@^3.7.4"\
-    " select2@^4.0.7-rc.0"\
-    " waypoints@^4.0.1"
+  run 'spring stop'
+  run 'yarn add jquery popper.js bootstrap@^4.2.1'\
+    ' @fortawesome/fontawesome-free@^5.7.2'\
+    ' cleave.js@^1.4.7'\
+    ' izitoast@^1.4.0'\
+    ' jquery.nicescroll@^3.7.4'\
+    ' select2@^4.0.7-rc.0'\
+    ' waypoints@^4.0.1'
 
   directory 'app',      './app',      force: true
   directory 'config',   './config',   force: true
