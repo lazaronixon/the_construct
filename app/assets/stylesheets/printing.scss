@@ -5,11 +5,11 @@
 @media print {
   .main-navbar, .navbar-bg,
   .main-sidebar, .main-footer {
-    display: none !important;
+    display: none;
   }
 
   .main-content, .card .card-header,
   .card .card-body, .card .card-footer {
-    padding: 5px 10px !important;
+    padding: 5px 10px;
   }
 }
