@@ -9,7 +9,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track': 'reload' if mobile_app? %>    
+    <%= stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track': 'reload' if platform.mobile_app? %>
+    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 

@@ -7,10 +7,6 @@ module ApplicationHelper
     %w[index show new edit create update]
   end
 
-  def mobile_app?
-    request.user_agent.to_s.match?(/TheConstructMobile/)
-  end
-
   def active_nav_item(controller, actions)
     'active' if active_actions?(controller, actions)
   end

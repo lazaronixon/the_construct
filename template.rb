@@ -3,6 +3,7 @@ def source_paths
 end
 
 gem 'ransack', github: 'activerecord-hackery/ransack', ref: '544bcdd'
+gem 'platform_agent'
 gem 'geared_pagination'
 gem 'spreadsheet_architect'
 
