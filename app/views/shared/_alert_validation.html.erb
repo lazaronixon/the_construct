@@ -1,0 +1,14 @@
+<!-- USE THIS PARTIAL INSIDE FORM IF YOU WANT TO USE SERVER SIDE VALIDATION -->
+<% if resource.errors.present? %>
+  <div class="alert alert-danger alert-dismissible show fade">
+    <div class="alert-body">
+      <button class="close" data-dismiss="alert"><span>&times;</span></button>
+      <h5>Please correct the following items and try again:</h5>
+      <ul class="pl-3">
+        <% resource.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
