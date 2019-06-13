@@ -13,14 +13,14 @@
         <% end %>
       </li>
 
-      <!--
       <li class="menu-header">Controllers</li>
-      <#= render 'shared/sidebar_dropdown', title: 'Resources', icon: 'file-alt' do #>
+      <%= render 'shared/sidebar_dropdown', title: 'Resources', icon: 'fas fa-file-alt' do %>
+      <!--
         <li class="<#= active_nav_item('customers', crud_actions) #>">
           <#= link_to 'Customers', customers_path, class: 'nav-link' #>
         </li>
-      <# end #>
       -->
+      <% end %>
     </ul>
   </aside>
 </div>
