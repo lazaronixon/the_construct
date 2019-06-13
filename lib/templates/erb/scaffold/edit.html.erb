@@ -19,5 +19,5 @@
   </div>
 </section>
 
-<%%= link_to faicon(:eye, 'Show'), @<%= singular_table_name %>, data: { turbolinks_action: 'replace' }, class: 'btn btn-icon icon-left btn-info' %>
-<%%= link_to faicon(:arrow_left, 'Back'), 'javascript:history.back()', class: 'btn btn-icon icon-left btn-secondary d-mobile-none' %>
+<%%= link_to icon('fas fa-eye', 'Show'), @<%= singular_table_name %>, data: { turbolinks_action: 'replace' }, class: 'btn btn-icon icon-left btn-info' %>
+<%%= link_to icon('fas arrow-left', 'Back'), 'javascript:history.back()', class: 'btn btn-icon icon-left btn-secondary d-mobile-none' %>

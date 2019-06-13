@@ -1,4 +1,6 @@
 module ApplicationHelper
+  MOBILE_USER_AGENT = 'TheConstructMobile'
+
   def page_title
     content_for(:page_title) || Rails.application.class.to_s.split('::').first
   end
@@ -8,27 +10,21 @@ module ApplicationHelper
   end
 
   def mobile_app?
-    request.user_agent && request.user_agent.end_with?('TheConstructMobile')
+    request.user_agent && request.user_agent.end_with?(MOBILE_USER_AGENT)
   end
 
   def active_nav_item(controller, actions)
     'active' if active_actions?(controller, actions)
   end
 
-  def table_actions(resource, options = {})
-    output  = link_to tag.i(class: 'fas fa-eye'), resource, title: 'Show it', class: 'btn btn-icon btn-sm btn-info mr-1'
-    output += link_to tag.i(class: 'fas fa-edit'), edit_polymorphic_path(resource), title: 'Edit it', class: 'btn btn-icon btn-sm btn-warning mr-1'
-    output += link_to tag.i(class: 'fas fa-trash'), resource, title: 'Destroy it', class: 'btn btn-icon btn-sm btn-danger', method: :delete, data: { confirm: 'Are you sure?', remote: options[:remote] || true }
-  end
-
   def sort_link_turbo(attribute, *args)
     sort_link(attribute, *args.push({}, { data: { turbolinks_action: 'replace' } }))
   end
 
-  def faicon(name, text = nil, style = 'fas')
-    html_i = tag.i nil, class: "#{style} fa-#{name.to_s.dasherize}"
-    html_text = tag.span text
-    text ? tag.span(html_i + html_text) : html_i
+  def icon(klass, text = nil)
+    icon_tag = tag.i(class: klass)
+    text_tag = tag.span text
+    text ? tag.span(icon_tag + text_tag) : icon_tag
   end
 
   def infinite_link_to(path, last_page)

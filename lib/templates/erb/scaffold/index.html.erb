@@ -12,10 +12,10 @@
       <div class="card-header">
         <h4>List of <%= plural_table_name.titleize %></h4>
         <div class="card-header-action">
-          <%%= link_to faicon(:plus, 'New <%= singular_table_name.titleize %>'), new_<%= singular_route_name %>_path, class: 'btn btn-icon icon-left btn-primary' %>
+          <%%= link_to icon('fas fa-plus', 'New <%= singular_table_name.titleize %>'), new_<%= singular_route_name %>_path, class: 'btn btn-icon icon-left btn-primary' %>
           <%%= render 'shared/card_dropdown' do %>
-            <%%= link_to faicon(:download, 'Export Data'), <%= plural_table_name %>_path(format: :csv, q: request.params[:q]), class: 'dropdown-item has-icon' %>
-            <%%= link_to faicon(:print, 'Print Page'), 'javascript:window.print()', class: 'dropdown-item has-icon' %>
+            <%%= link_to icon('fas fa-download', 'Export Data'), <%= plural_table_name %>_path(format: :csv, q: request.params[:q]), class: 'dropdown-item has-icon' %>
+            <%%= link_to icon('fas fa-print', 'Print Page'), 'javascript:window.print()', class: 'dropdown-item has-icon' %>
           <%% end %>
         </div>
       </div>
@@ -26,7 +26,7 @@
             <#= f.text_field :name_cont, class: 'form-control m-input m-input--solid', placeholder: 'Name' #>
           </div>
           <div class="form-group col-sm-2 text-right">
-            <#= f.button faicon(:search, 'Search'), name: nil, class: 'btn btn-icon icon-left btn-primary' #>
+            <#= f.button icon('fas fa-search', 'Search'), name: nil, class: 'btn btn-icon icon-left btn-primary' #>
           </div>
         <# end #>
         -->
@@ -56,7 +56,11 @@
                   <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>
 <% end -%>
-                  <td><%%= table_actions(<%= singular_table_name %>) %></td>
+                  <td>
+                    <%%= link_to icon('fas fa-eye'), <%= model_resource_name %>, title: 'Show it', class: 'btn btn-icon btn-sm btn-info mr-1' %>
+                    <%%= link_to icon('fas fa-edit'), edit_<%= singular_route_name %>_path(<%= singular_table_name %>), title: 'Edit it', class: 'btn btn-icon btn-sm btn-warning mr-1' %>
+                    <%%= link_to icon('fas fa-trash'), <%= model_resource_name %>, title: 'Destroy it', class: 'btn btn-icon btn-sm btn-danger', method: :delete, data: { confirm: 'Are you sure?', remote: true } %>
+                  </td>
                 </tr>
               <%% end %>
             </tbody>

@@ -10,14 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= stub mobile
  *= require bootstrap/scss/bootstrap
  *= require fontawesome/rails
  *= require select2/dist/css/select2
  *= require izitoast/dist/css/iziToast
  *= require stisla/style
  *= require stisla/components
+ *= require_tree .
+ *= stub mobile
  *= require_self
  */
 
