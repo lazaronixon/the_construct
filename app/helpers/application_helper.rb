@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def mobile_app?
-    request.user_agent && request.user_agent.match?(/TheConstructMobile/)
+    request.user_agent.to_s.match?(/TheConstructMobile/)
   end
 
   def active_nav_item(controller, actions)
