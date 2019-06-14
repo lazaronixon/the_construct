@@ -29,7 +29,6 @@ The construct replaces default scaffold template with a new one focused on produ
 * [Exportable data](https://github.com/westonganger/spreadsheet_architect)
 * [Input masks](https://demo.getstisla.com/forms-advanced-form.html)
 * [Select with autocomplete on references fields](https://demo.getstisla.com/forms-advanced-form.html)
-* [Date/Time Pickers](https://demo.getstisla.com/forms-advanced-form.html)
 * [Toastr plugin to show flash messages](https://demo.getstisla.com/modules-toastr.html)
 * [HTML5 client side validation integration](https://demo.getstisla.com/forms-validation.html)
 * Ajax form post with turbolinks handlers

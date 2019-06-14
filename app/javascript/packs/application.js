@@ -18,7 +18,6 @@ import "vendors/stisla/scripts"
 import "select2"
 import "izitoast"
 import "cleave.js"
-import "bootstrap-daterangepicker"
 import "waypoints/lib/jquery.waypoints"
 import "waypoints/lib/shortcuts/infinite"
 

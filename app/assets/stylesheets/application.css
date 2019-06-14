@@ -14,7 +14,6 @@
  *= require fontawesome/rails
  *= require select2/dist/css/select2
  *= require izitoast/dist/css/iziToast
- *= require bootstrap-daterangepicker/daterangepicker
  *= require stisla/style
  *= require stisla/components
  *= require_tree .
