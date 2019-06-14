@@ -5,6 +5,8 @@ export default class extends Controller {
   connect() {
     const FORMAT = "YYYY/MM/DD hh:mm"
 
+    this.element.placeholder = FORMAT
+
     $(this.element).daterangepicker({
       locale: { format: FORMAT },
       singleDatePicker: true,

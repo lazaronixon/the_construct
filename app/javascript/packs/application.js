@@ -19,7 +19,6 @@ import "select2"
 import "izitoast"
 import "cleave.js"
 import "bootstrap-daterangepicker"
-import "bootstrap-timepicker"
 import "waypoints/lib/jquery.waypoints"
 import "waypoints/lib/shortcuts/infinite"
 
