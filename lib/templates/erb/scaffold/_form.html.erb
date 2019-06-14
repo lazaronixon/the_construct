@@ -13,7 +13,7 @@
     </div>
 <% elsif [:date, :datetime].include?(attribute.type) -%>
     <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>), class: "form-control", data: { controller: "<%= attribute.type %>" } %>
-<% elsif [:time, :timestamp].include?(attribute.type) -%>
+<% elsif [:time].include?(attribute.type) -%>
     <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>, format: :time), class: "form-control", data: { controller: "time" } %>
 <% elsif [:float, :decimal].include?(attribute.type) -%>
     <%%= form.text_field :<%= attribute.column_name %>, value: n(<%= model_resource_name %>.<%= attribute.column_name %>), class: "form-control", data: { controller: "decimal" } %>

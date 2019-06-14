@@ -46,7 +46,7 @@
 <% attributes.each do |attribute| -%>
 <% if [:date, :datetime].include?(attribute.type) -%>
                   <td><%%= l(<%= singular_table_name %>.<%= attribute.name %>) %></td>
-<% elsif [:time, :timestamp].include?(attribute.type) -%>
+<% elsif [:time].include?(attribute.type) -%>
                   <td><%%= l(<%= singular_table_name %>.<%= attribute.name %>, format: :time) %></td>
 <% elsif [:float, :decimal].include?(attribute.type) -%>
                   <td><%%= n(<%= singular_table_name %>.<%= attribute.name %>) %></td>

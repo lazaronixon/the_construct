@@ -19,7 +19,7 @@
           <dt class="col-sm-3"><%= attribute.human_name %>:</dt>
   <% if [:date, :datetime].include?(attribute.type) -%>
           <dd class="col-sm-9"><%%= l(@<%= singular_table_name %>.<%= attribute.name %>) %></dd>
-  <% elsif [:time, :timestamp].include?(attribute.type) -%>
+  <% elsif [:time].include?(attribute.type) -%>
           <dd class="col-sm-9"><%%= l(@<%= singular_table_name %>.<%= attribute.name %>, format: :time) %></dd>
   <% elsif [:float, :decimal].include?(attribute.type) -%>
           <dd class="col-sm-9"><%%= n(@<%= singular_table_name %>.<%= attribute.name %>) %></dd>
