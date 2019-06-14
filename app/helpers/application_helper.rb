@@ -25,8 +25,7 @@ module ApplicationHelper
     link_to 'Next page', path, class: 'infinite-more-link' unless last_page
   end
 
-  def n(number, precision = 2, options = {})
-    options[:precision] = precision
+  def n(number, options = {})
     number_with_precision(number, options)
   end
 

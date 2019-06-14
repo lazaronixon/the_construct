@@ -32,7 +32,10 @@
 en:
   hello: "Hello world"
 
-# Custom formats  
+# Custom formats
+  number:
+    format:
+      precision: 2
   date:
     formats:
       default: "%Y/%m/%d"
