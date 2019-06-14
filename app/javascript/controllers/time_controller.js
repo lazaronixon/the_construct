@@ -3,11 +3,23 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
   connect() {
-    this.element.placeholder = 'hh:mm:ss'
-    new Cleave(this.element, {
-      time: true,
-      timePattern: ['h', 'm', 's']
+    $(this.element).timepicker({
+      defaultTime: "",
+      minuteStep: 1,
+      showSeconds: true,
+      showMeridian: false,
+      snapToStep: true,
+      icons: this.icons
     })
+  }
+
+  // Private
+
+  get icons() {
+    return {
+      up: 'fas fa-chevron-up',
+      down: 'fas fa-chevron-down'
+    }
   }
 
 }

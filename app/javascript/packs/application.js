@@ -10,6 +10,7 @@ require("channels")
 
 import "bootstrap"
 import "jquery.nicescroll"
+import "moment"
 
 import "vendors/stisla/stisla"
 import "vendors/stisla/scripts"
@@ -17,6 +18,8 @@ import "vendors/stisla/scripts"
 import "select2"
 import "izitoast"
 import "cleave.js"
+import "bootstrap-daterangepicker"
+import "bootstrap-timepicker"
 import "waypoints/lib/jquery.waypoints"
 import "waypoints/lib/shortcuts/infinite"
 

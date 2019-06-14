@@ -24,6 +24,8 @@ after_bundle do
     ' izitoast@^1.4.0'\
     ' jquery.nicescroll@^3.7.4'\
     ' select2@^4.0.7-rc.0'\
+    ' bootstrap-daterangepicker@^3.0.3'\
+    ' bootstrap-timepicker@^0.5.2'\
     ' waypoints@^4.0.1'
 
   directory 'app',      './app',      force: true
