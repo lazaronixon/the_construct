@@ -1,8 +1,8 @@
 module TestCapybaraHelper
   def select2(value = nil, from: nil, **options)
     find(:label, text: from).click
-    find(".select2-container--focus").click
-    find(".select2-results__option", text: value, match: :first).click
+    find('.select2-container--focus').click
+    find('.select2-results__option', text: value, match: :first).click
   end
 
   def check_label(locator = nil, **options)
