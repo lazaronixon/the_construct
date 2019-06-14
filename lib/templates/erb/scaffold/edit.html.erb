@@ -21,3 +21,5 @@
 
 <%%= link_to icon('fas fa-eye', 'Show'), @<%= singular_table_name %>, data: { turbolinks_action: 'replace' }, class: 'btn btn-icon icon-left btn-info' %>
 <%%= link_to icon('fas fa-arrow-left', 'Back'), 'javascript:history.back()', class: 'btn btn-icon icon-left btn-secondary d-mobile-none' %>
+
+<%% content_for(:page_title, 'Editing <%= singular_table_name.titleize %>') %>
