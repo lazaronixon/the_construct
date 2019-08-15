@@ -12,7 +12,7 @@ gem_group :production do
   gem 'memcachier'
   gem 'redis'
   gem 'sidekiq'
-  gem 'rack-attack'
+  gem 'rack-ratelimit'
   gem 'scout_apm'
 end
 
@@ -48,9 +48,15 @@ after_bundle do
 
   environment nil, env: 'production' do <<~RUBY
     config.force_ssl = true
-    config.middleware.use Rack::Attack
     config.active_job.queue_adapter = :sidekiq
     config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
+
+    config.middleware.use(
+      Rack::Ratelimit, name: 'API',
+      conditions: ->(env) { ActionDispatch::Request.new(env).format.json? },
+      rate:   [50, 10.seconds],
+      redis:  Redis.new
+    ) { |env| ActionDispatch::Request.new(env).ip }    
 
     config.cache_store = :mem_cache_store, (ENV['MEMCACHIER_SERVERS'] || '').split(','), {
       username: ENV['MEMCACHIER_USERNAME'], password: ENV['MEMCACHIER_PASSWORD'],

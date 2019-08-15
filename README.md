@@ -42,7 +42,7 @@ The construct comes with some opinionated configurations and addons that should 
 * [Redis Cloud](https://elements.heroku.com/addons/rediscloud) or any other for memory data store.
 * [PaperTrail](https://elements.heroku.com/addons/papertrail) or any other for logging.
 * [SendGrid](https://elements.heroku.com/addons/sendgrid) for email delivery.
-* [RackAttack](https://github.com/kickstarter/rack-attack) for blocking & throttling abusive requests.
+* [RackRatelimit](https://github.com/jeremy/rack-ratelimit) for blocking & throttling abusive requests.
 * AssetHost configured to ENV['CLOUDFRONT_URL'].
 * Sidekiq as queue adapter.
 * Force SSL.
