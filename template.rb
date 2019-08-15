@@ -13,6 +13,7 @@ gem_group :production do
   gem 'redis'
   gem 'sidekiq'
   gem 'rack-ratelimit'
+  gem 'rack-timeout'
   gem 'scout_apm'
 end
 
@@ -56,7 +57,7 @@ after_bundle do
       conditions: ->(env) { ActionDispatch::Request.new(env).format.json? },
       rate:   [50, 10.seconds],
       redis:  Redis.new
-    ) { |env| ActionDispatch::Request.new(env).ip }    
+    ) { |env| ActionDispatch::Request.new(env).ip }
 
     config.cache_store = :mem_cache_store, (ENV['MEMCACHIER_SERVERS'] || '').split(','), {
       username: ENV['MEMCACHIER_USERNAME'], password: ENV['MEMCACHIER_PASSWORD'],
