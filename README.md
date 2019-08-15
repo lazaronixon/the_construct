@@ -51,4 +51,4 @@ The construct comes with some opinionated configurations and addons that should 
 The construct is a [Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith) template so it is full compatible with [TurboLinks IOS](https://github.com/turbolinks/turbolinks-ios), [TurboLinks Android](https://github.com/turbolinks/turbolinks-android) or [React Native TurboLinks](https://github.com/lazaronixon/react-native-turbolinks). After create a new project you can easily port it to a IOS/Android APP.
 
 ### Requirements
-Rails >= 6
+Rails ~> 6.0.0.rc2
