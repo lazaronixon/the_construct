@@ -10,7 +10,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track': 'reload' if platform.mobile_app? %>
-    
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -21,7 +21,7 @@
         <%= render 'shared/navbar' %>
         <%= render 'shared/sidebar' %>
         <div class="main-content">
-          <%= yield %>
+          <%= content_for?(:content) ? yield(:content) : yield %>
         </div>
         <%= render 'shared/footer' %>
       </div>
