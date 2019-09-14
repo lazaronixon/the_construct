@@ -8,8 +8,6 @@ gem 'geared_pagination'
 gem 'spreadsheet_architect'
 
 gem_group :production do
-  gem 'dalli'
-  gem 'memcachier'
   gem 'redis'
   gem 'sidekiq'
   gem 'rack-ratelimit'
@@ -59,10 +57,7 @@ after_bundle do
       redis:  Redis.new
     ) { |env| ActionDispatch::Request.new(env).ip }
 
-    config.cache_store = :mem_cache_store, (ENV['MEMCACHIER_SERVERS'] || '').split(','), {
-      username: ENV['MEMCACHIER_USERNAME'], password: ENV['MEMCACHIER_PASSWORD'],
-      socket_timeout: 1.5, :socket_failure_delay => 0.2
-    }
+    config.cache_store = :redis_cache_store, { url: ENV['REDIS_CACHE_URL'] }
   RUBY
   end
 end
