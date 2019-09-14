@@ -49,6 +49,7 @@ after_bundle do
     config.force_ssl = true
     config.active_job.queue_adapter = :sidekiq
     config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
+    config.cache_store = :redis_cache_store, { url: ENV['REDIS_CACHE_URL'] }
 
     config.middleware.use(
       Rack::Ratelimit, name: 'API',
@@ -56,8 +57,6 @@ after_bundle do
       rate:   [50, 10.seconds],
       redis:  Redis.new
     ) { |env| ActionDispatch::Request.new(env).ip }
-
-    config.cache_store = :redis_cache_store, { url: ENV['REDIS_CACHE_URL'] }
   RUBY
   end
 end
