@@ -12,7 +12,6 @@ gem_group :production do
   gem 'sidekiq'
   gem 'rack-ratelimit'
   gem 'rack-timeout'
-  gem 'scout_apm'
 end
 
 after_bundle do
