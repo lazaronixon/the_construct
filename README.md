@@ -37,9 +37,7 @@ The construct replaces default scaffold template with a new one focused on produ
 
 ### Heroku Ready
 The construct comes with some opinionated configurations and addons that should be on any production application like:
-* [MemCachier](https://elements.heroku.com/addons/memcachier) for caching.
-* [Scout](https://elements.heroku.com/addons/scout) for Monitoring.
-* [Redis Cloud](https://elements.heroku.com/addons/rediscloud) or any other for memory data store.
+* [Heroku Redis](https://elements.heroku.com/addons/heroku-redis) for data store and caching.
 * [PaperTrail](https://elements.heroku.com/addons/papertrail) or any other for logging.
 * [SendGrid](https://elements.heroku.com/addons/sendgrid) for email delivery.
 * [RackRatelimit](https://github.com/jeremy/rack-ratelimit) for blocking & throttling abusive requests.
