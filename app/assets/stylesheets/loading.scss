@@ -21,23 +21,6 @@
   @include loader;
 }
 
-.infinite-loading:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  width: 3rem;
-  height: 3rem;
-  opacity: 0.5;
-  border-radius: 100%;
+[data-target='infinite-page.container'].loading:after {
   @include loader;
-}
-
-.infinite-more-link {
-  display: none;
-}
-
-.card-body-infinite {
-  position: relative;
-  padding-bottom: 5rem;
 }

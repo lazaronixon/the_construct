@@ -32,3 +32,23 @@
 .table .btn-icon.btn-sm {
   line-height: 15px;
 }
+
+a[data-target='infinite-page.more'] {
+  display: none;
+}
+
+[data-controller='infinite-page'] {
+  position: relative;
+}
+
+[data-target='infinite-page.container'].loading:after {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  border-radius: 100%;
+  margin: -2.2rem 0 0 -1rem;
+  content: '';
+}

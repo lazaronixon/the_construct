@@ -19,7 +19,7 @@
           <%% end %>
         </div>
       </div>
-      <div class="card-body card-body-infinite">
+      <div class="card-body" data-controller="infinite-page">
         <!--
         <#= search_form_for @search, remote: true, enforce_utf8: false, data: { controller: 'turbolinks-form' }, html: { class: 'form-row' } do |f| #>
           <div class="form-group col-sm-10">
@@ -31,7 +31,7 @@
         <# end #>
         -->
         <div class="table-responsive">
-          <table class="table table-striped table-md" data-controller="infinite-page">
+          <table class="table table-striped table-md">
             <thead>
               <tr>
 <% attributes.each do |attribute| -%>
@@ -40,9 +40,9 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody data-target="infinite-page.container">
               <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-                <tr class="infinite-item">
+                <tr data-target="infinite-page.item">
 <% attributes.each do |attribute| -%>
 <% if [:date, :datetime].include?(attribute.type) -%>
                   <td><%%= l(<%= singular_table_name %>.<%= attribute.name %>) %></td>
@@ -65,7 +65,7 @@
               <%% end %>
             </tbody>
           </table>
-          <%%= infinite_link_to <%= plural_table_name %>_path(page: @page.next_number), @page.last? %>
+          <%%= link_to 'Next page', <%= index_helper %>_path(page: @page.next_number), data: { target: 'infinite-page.more' } unless @page.last? %>
         </div>
       </div>
     </div>

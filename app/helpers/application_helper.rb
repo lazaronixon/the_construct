@@ -21,10 +21,6 @@ module ApplicationHelper
     text ? tag.span(icon_tag + text_tag) : icon_tag
   end
 
-  def infinite_link_to(path, condition)
-    link_to 'Next page', path, class: 'infinite-more-link' unless condition
-  end
-
   def n(number, options = {})
     number_with_precision(number, options)
   end
