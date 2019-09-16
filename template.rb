@@ -2,7 +2,7 @@ def source_paths
   [__dir__]
 end
 
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack'
 gem 'platform_agent'
 gem 'geared_pagination'
 gem 'spreadsheet_architect'
