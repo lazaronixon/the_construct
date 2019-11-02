@@ -65,7 +65,7 @@
               <%% end %>
             </tbody>
           </table>
-          <%%= link_to 'Next page', <%= index_helper %>_path(page: @page.next_number), data: { target: 'infinite-page.more' } unless @page.last? %>
+          <%%= link_to 'Next page', <%= index_helper %>_path(page: @page.next_number, q: request.params[:q]), data: { target: 'infinite-page.more' } unless @page.last? %>
         </div>
       </div>
     </div>
