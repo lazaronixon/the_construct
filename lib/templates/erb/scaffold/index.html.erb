@@ -21,7 +21,7 @@
       </div>
       <div class="card-body" data-controller="infinite-page">
         <!--
-        <#= search_form_for @search, remote: true, enforce_utf8: false, data: { controller: 'turbolinks-form' }, html: { class: 'form-row' } do |f| #>
+        <#= search_form_for @search, remote: true, data: { controller: 'turbolinks-form' }, html: { class: 'form-row' } do |f| #>
           <div class="form-group col-sm-10">
             <#= f.text_field :name_cont, class: 'form-control m-input m-input--solid', placeholder: 'Name' #>
           </div>
