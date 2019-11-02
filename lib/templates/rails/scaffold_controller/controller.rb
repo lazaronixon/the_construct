@@ -31,7 +31,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %>.save!
 
     respond_to do |format|
-      format.any(:html, :js) { redirect_to <%= redirect_resource_name %>, notice: <%= "'#{human_name} was successfully created.'" %> }
+      format.html { redirect_to <%= redirect_resource_name %>, notice: <%= "'#{human_name} was successfully created.'" %> }
       format.json { render :show, status: :created }
     end
   end
@@ -39,7 +39,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   def update
     @<%= singular_table_name %>.update!(<%= "#{singular_table_name}_params" %>)
     respond_to do |format|
-      format.any(:html, :js) { redirect_to <%= redirect_resource_name %>, notice: <%= "'#{human_name} was successfully updated.'" %> }
+      format.html { redirect_to <%= redirect_resource_name %>, notice: <%= "'#{human_name} was successfully updated.'" %> }
       format.json { render :show }
     end
   end
@@ -47,7 +47,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   def destroy
     @<%= orm_instance.destroy %>
     respond_to do |format|
-      format.any(:html, :js) { redirect_to <%= index_helper %>_url, notice: <%= "'#{human_name} was successfully destroyed.'" %> }
+      format.html { redirect_to <%= index_helper %>_url, notice: <%= "'#{human_name} was successfully destroyed.'" %> }
       format.json { head :no_content }
     end
   end
