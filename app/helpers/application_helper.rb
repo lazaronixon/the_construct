@@ -21,14 +21,17 @@ module ApplicationHelper
     text ? tag.span(icon_tag + text_tag) : icon_tag
   end
 
+  def np(number, options = {})
+    number_with_precision number, options
+  end
+
+  def nd(number, options = {})
+    number_with_delimiter number, options
+  end
+
   def localize(object, options = {})
     super(object, options) if object
   end
-
-  alias :np, :number_with_precision
-
-  alias :nd, :number_with_delimiter
-
   alias :l :localize
 
   private
