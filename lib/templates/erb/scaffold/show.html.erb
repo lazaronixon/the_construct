@@ -22,7 +22,7 @@
   <% elsif [:time].include?(attribute.type) -%>
           <dd class="col-sm-9"><%%= l(@<%= singular_table_name %>.<%= attribute.name %>, format: :time) %></dd>
   <% elsif [:float, :decimal].include?(attribute.type) -%>
-          <dd class="col-sm-9"><%%= n(@<%= singular_table_name %>.<%= attribute.name %>) %></dd>
+          <dd class="col-sm-9"><%%= np(@<%= singular_table_name %>.<%= attribute.name %>) %></dd>
   <% elsif attribute.type == :boolean -%>
           <dd class="col-sm-9"><%%= t(@<%= singular_table_name %>.<%= attribute.name %>) %></dd>
   <% else -%>

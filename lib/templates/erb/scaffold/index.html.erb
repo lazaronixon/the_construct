@@ -49,7 +49,7 @@
 <% elsif [:time].include?(attribute.type) -%>
                   <td><%%= l(<%= singular_table_name %>.<%= attribute.name %>, format: :time) %></td>
 <% elsif [:float, :decimal].include?(attribute.type) -%>
-                  <td><%%= n(<%= singular_table_name %>.<%= attribute.name %>) %></td>
+                  <td><%%= np(<%= singular_table_name %>.<%= attribute.name %>) %></td>
 <% elsif attribute.type == :boolean -%>
                   <td><%%= t(<%= singular_table_name %>.<%= attribute.name %>) %></td>
 <% else -%>
