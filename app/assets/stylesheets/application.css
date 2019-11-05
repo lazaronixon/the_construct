@@ -52,3 +52,14 @@ a[data-target='infinite-page.more'] {
   margin: -2.2rem 0 0 -1rem;
   content: '';
 }
+
+/** HIDE-SPINNERS-BEGIN **/
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/** HIDE-SPINNERS-END **/
