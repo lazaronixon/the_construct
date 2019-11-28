@@ -33,6 +33,11 @@
   line-height: 15px;
 }
 
+.table thead th, .table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 a[data-target='infinite-page.more'] {
   display: none;
 }
