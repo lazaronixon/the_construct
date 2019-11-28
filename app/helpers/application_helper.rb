@@ -36,6 +36,6 @@ module ApplicationHelper
 
   private
     def active_actions?(controller, actions)
-      controller == params[:controller] && actions.include?(params[:action])
+      params[:controller].include?(controller) && actions.include?(params[:action])
     end
 end
