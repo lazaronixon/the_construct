@@ -1,5 +1,5 @@
 class ApplicationPlatform < PlatformAgent
   def mobile_app?
-    match?(/TheConstructMobile/)
+    match? /TheConstructMobile/
   end
 end
