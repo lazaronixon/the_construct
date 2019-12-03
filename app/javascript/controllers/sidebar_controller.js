@@ -9,8 +9,7 @@ export default class extends Controller {
     }
   }
 
-  // Private
-
+// Private
   get activeDropDownItem() {
     return this.element.querySelector(".dropdown-menu > li.active")
   }
