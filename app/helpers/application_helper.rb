@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def crud_actions
-    %w[index show new edit create update]
+    %w( index show new edit create update )
   end
 
   def active_nav_item(controller, actions)
