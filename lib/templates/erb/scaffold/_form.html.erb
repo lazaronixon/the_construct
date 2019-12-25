@@ -5,16 +5,16 @@
     <%%= form.label :<%= attribute.column_name %> %>
 <% end -%>
 <% if attribute.reference? -%>
-    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, {}, { class: "form-control", data: { controller: "select" } }) %>
+    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, {}, { class: 'form-control', data: { controller: 'select' } }) %>
 <% elsif attribute.field_type == :check_box -%>
     <div class="custom-control custom-checkbox">
-      <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: "custom-control-input" %>
+      <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'custom-control-input' %>
       <%%= form.label :<%= attribute.column_name %>, class: 'custom-control-label' %>
     </div>
 <% elsif %i(date datetime).include?(attribute.type) -%>
-    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>), class: "form-control", data: { controller: "<%= attribute.type %>" } %>
+    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>), class: 'form-control', data: { controller: '<%= attribute.type %>' } %>
 <% elsif %i(time).include?(attribute.type) -%>
-    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>, format: :time), class: "form-control", data: { controller: "time" } %>
+    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>, format: :time), class: 'form-control', data: { controller: 'time' } %>
 <% elsif %i(float decimal).include?(attribute.type) -%>
     <%%= form.number_field :<%= attribute.column_name %>, step: :any, class: 'form-control' %>
 <% else -%>
