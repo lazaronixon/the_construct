@@ -16,7 +16,6 @@ import "vendors/stisla/stisla"
 import "vendors/stisla/scripts"
 
 import "select2"
-import "izitoast"
 import "cleave.js"
 import "waypoints/lib/noframework.waypoints"
 import "waypoints/lib/shortcuts/infinite"
