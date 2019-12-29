@@ -4,6 +4,9 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+# Initialize default_url_options
+Rails.application.routes.default_url_options[:host] = Rails.configuration.app['url']
+
 # Initialize SMTP Settings
 ActionMailer::Base.smtp_settings = {
   :user_name => ENV['SENDGRID_USERNAME'],
