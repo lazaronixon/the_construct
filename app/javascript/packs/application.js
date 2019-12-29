@@ -11,7 +11,6 @@ require("channels")
 
 import "bootstrap"
 import "jquery.nicescroll"
-import "moment"
 
 import "vendors/stisla/stisla"
 import "vendors/stisla/scripts"
