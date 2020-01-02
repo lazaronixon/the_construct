@@ -1,5 +1,4 @@
 import { Controller } from "stimulus"
-import iziToast from "izitoast"
 
 export default class extends Controller {
 

@@ -1,5 +1,4 @@
 import { onDocumentReady, findElement, removeElement } from "helpers"
-import iziToast from "izitoast"
 import { rFetch } from "./helpers"
 
 class App {

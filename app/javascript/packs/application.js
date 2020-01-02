@@ -3,21 +3,33 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
+// Core libraries
 require("turbolinks").start()
+require("@rails/ujs").start()
 require("@rails/activestorage").start()
-require("app").start()
 require("channels")
 
-import "bootstrap"
-import "jquery.nicescroll"
+// jQuery (as a read only property so browser extensions can't clobber it)
+const jquery = require("jquery")
+const descriptor = { value: jquery, writable: false, configurable: false }
+Object.defineProperties(window, { $: descriptor, jQuery: descriptor })
 
-import "vendors/stisla/stisla"
-import "vendors/stisla/scripts"
+// App libraries
+require("bootstrap")
+require("jquery.nicescroll")
 
-import "select2"
-import "cleave.js"
-import "waypoints/lib/noframework.waypoints"
-import "waypoints/lib/shortcuts/infinite"
+require("select2")
+require("cleave.js")
+require("waypoints/lib/noframework.waypoints")
+require("waypoints/lib/shortcuts/infinite")
+
+window.iziToast = require("izitoast")
+
+// Stisla
+require("vendors/stisla/stisla")
+require("vendors/stisla/scripts")
+
+// Application
+require("app").start()
 
 import "controllers"
