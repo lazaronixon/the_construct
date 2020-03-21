@@ -6,6 +6,7 @@ gem 'ransack'
 gem 'platform_agent'
 gem 'geared_pagination'
 gem 'spreadsheet_architect'
+gem 'turbolinks_render'
 
 gem_group :production do
   gem 'redis'
