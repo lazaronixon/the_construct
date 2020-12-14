@@ -13,6 +13,7 @@
       body: '',
       buttons: [],
       autoFocus: true,
+      removeOnDismiss: false,
       created: function() {},
       appended: function() {},
       onFormSubmit: function() {},
@@ -151,7 +152,13 @@
       }
 
       $(document).on("click", '.' + trigger_class, function() {
-        $('#' + id).modal(options.modal);
+        let modal = $('#' + id).modal(options.modal);
+
+        if(options.removeOnDismiss) {
+          modal.on('hidden.bs.modal', function() {
+            modal.remove();
+          });
+        }
 
         return false;
       });

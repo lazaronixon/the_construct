@@ -88,24 +88,27 @@ $(document).on("turbolinks:load", function() {
         sidebar_nicescroll = $(".main-sidebar").getNiceScroll();
 
         $(".main-sidebar .sidebar-menu li a.has-dropdown").off('click').on('click', function() {
-          var me = $(this);
+          var me     = $(this);
+          var active = false;
+          if(me.parent().hasClass("active")){
+            active = true;
+          }
 
           $('.main-sidebar .sidebar-menu li.active > .dropdown-menu').slideUp(500, function() {
             update_sidebar_nicescroll();
             return false;
           });
+
           $('.main-sidebar .sidebar-menu li.active').removeClass('active');
 
-          if(me.parent().hasClass("active")) {
+          if(active==true) {
             me.parent().removeClass('active');
-
             me.parent().find('> .dropdown-menu').slideUp(500, function() {
               update_sidebar_nicescroll();
               return false;
             });
           }else{
             me.parent().addClass('active');
-
             me.parent().find('> .dropdown-menu').slideDown(500, function() {
               update_sidebar_nicescroll();
               return false;
