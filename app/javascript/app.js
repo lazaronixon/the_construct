@@ -1,5 +1,4 @@
-import { onDocumentReady, findElement, removeElement } from "helpers"
-import { rFetch } from "./helpers"
+import { onDocumentReady } from "helpers"
 
 class App {
 

@@ -20,7 +20,7 @@ after_bundle do
     ' @fortawesome/fontawesome-free@^5.7.2'\
     ' cleave.js@^1.4.7'\
     ' izitoast@^1.4.0'\
-    ' jquery.nicescroll@^3.7.4'\
+    ' jquery.nicescroll@^3.7.6'\
     ' select2@^4.0.7-rc.0'\
     ' waypoints@^4.0.1'
 

@@ -4,14 +4,18 @@ export default class extends Controller {
 
   connect() {
     this.element.setAttribute("novalidate", "true")
+
     $(this.element).submit(function() {
       var form = $(this);
+
       if (form[0].checkValidity() === false) {
         event.preventDefault();
         event.stopPropagation();
+      } else {
+        form.addClass("was-validated");
       }
-      form.addClass("was-validated");
     })
+
   }
 
 }
