@@ -1,5 +1,5 @@
 <% flash.each do |type, msg| %>
-  <% if msg.present? && msg.is_a? String %>
+  <% if msg.present? && msg.is_a?(String) %>
     <div data-controller="toastr" data-toastr-type="<%= type %>" data-toastr-message="<%= msg %>"></div>
   <% end %>
 <% end %>
