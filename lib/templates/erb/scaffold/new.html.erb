@@ -19,6 +19,6 @@
   </div>
 </section>
 
-<%%= link_to icon('fas fa-arrow-left', 'Back'), 'javascript:history.back()', class: 'btn btn-icon icon-left btn-secondary d-mobile-none' %>
+<%%= link_to icon('fas fa-arrow-left', 'Back'), <%= plural_table_name %>_path, class: 'btn btn-icon icon-left btn-secondary d-mobile-none' %>
 
 <%% content_for(:page_title, 'New <%= singular_table_name.titleize %>') %>
