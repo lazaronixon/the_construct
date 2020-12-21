@@ -5,21 +5,26 @@
     <%%= form.label :<%= attribute.column_name %> %>
 <% end -%>
 <% if attribute.reference? -%>
-    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, {}, { class: 'form-control', data: { controller: 'select' } }) %>
+    <%%= form.collection_select(:<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :to_s, {}, { class: "form-control #{'is-invalid' if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present?}", data: { controller: 'select' } }) %>
 <% elsif attribute.field_type == :check_box -%>
     <div class="custom-control custom-checkbox">
       <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'custom-control-input' %>
       <%%= form.label :<%= attribute.column_name %>, class: 'custom-control-label' %>
     </div>
 <% elsif %i(date datetime).include?(attribute.type) -%>
-    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>), class: 'form-control', data: { controller: '<%= attribute.type %>' } %>
+    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>), class: "form-control #{'is-invalid' if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present?}", data: { controller: '<%= attribute.type %>' } %>
 <% elsif %i(time).include?(attribute.type) -%>
-    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>, format: :time), class: 'form-control', data: { controller: 'time' } %>
+    <%%= form.text_field :<%= attribute.column_name %>, value: l(<%= model_resource_name %>.<%= attribute.column_name %>, format: :time), class: "form-control #{'is-invalid' if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present?}", data: { controller: 'time' } %>
 <% elsif %i(float decimal).include?(attribute.type) -%>
-    <%%= form.number_field :<%= attribute.column_name %>, step: :any, class: 'form-control' %>
+    <%%= form.number_field :<%= attribute.column_name %>, step: :any, class: "form-control #{'is-invalid' if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present?}" %>
 <% else -%>
-    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'form-control' %>
+    <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, class: "form-control #{'is-invalid' if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present?}" %>
 <% end -%>
+    <%% if <%= model_resource_name %>.errors[:<%= attribute.column_name %>].present? %>
+      <div class="invalid-feedback">
+        <%%= <%= model_resource_name %>.errors[:<%= attribute.column_name %>].to_sentence.humanize %>
+      </div>
+    <%% end %>
   </div>
 <% end -%>
   <div class="card-footer pl-0">
