@@ -1,3 +1,5 @@
+### This library is deprecated in reason of [Administration-Zero](https://github.com/lazaronixon/administration-zero)
+
 # The Construct
 **This is The Construct.** It's our rails template, it has almost everything. From beautiful layout to production ready setup, javascript components and good practices to learn.
 
