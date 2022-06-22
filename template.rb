@@ -51,7 +51,7 @@ after_bundle do
 
     config.middleware.use(
       Rack::Ratelimit, name: 'API',
-      conditions: ->(env) { ActionDispatch::Request.new(env).format.json? },
+      conditions: ->(env) { ActionDispatch::Request.new(env.dup).format.json? },
       rate:   [50, 10.seconds],
       redis:  Redis.new
     ) { |env| ActionDispatch::Request.new(env).ip }
